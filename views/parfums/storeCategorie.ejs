@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Electro - HTML Ecommerce Template</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/bootstrap.min.css" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="/HomeParfumStyle/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/style.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"><i class="fa fa-phone"></i> +212 627-189630</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Hamza@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> 302 BD SEBTA</a></li>
+                </ul>
+                <ul class="header-links pull-right">
+                    <li><a href="#"><i class="fa fa-money"></i> DH</a></li>
+                    <li><a href="/users/login"><i class="fa fa-user-o"></i> My Account</a></li>
+                    <% if (user) { %>
+                        <li><a href="/users/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+        <!-- /TOP HEADER -->
+    
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-3">
+                        <div class="header-logo">
+                            <a href="#" class="logo">
+                                <img src="/HomeParfumStyle/img/LogoHHR.png" style="position: relative; left: -140px;" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+    
+                    <!-- SEARCH BAR -->
+                    <div class="col-md-6" style="position: relative; top: 10px; right: 0px;">
+                        <div class="header-search">
+                            <div class="searchBox">
+                                <input class="searchInput" type="text" name="" placeholder="Search something">
+                                <button class="searchButton" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2_17)">
+                                            <g filter="url(#filter0_d_2_17)">
+                                                <path
+                                                    d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
+                                                    stroke="white" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                                            </g>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139"
+                                                height="29.7139" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                                </feColorMatrix>
+                                                <feOffset dy="4"></feOffset>
+                                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+                                                </feColorMatrix>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_2_17"></feBlend>
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17"
+                                                    result="shape">
+                                                </feBlend>
+                                            </filter>
+                                            <clipPath id="clip0_2_17">
+                                                <rect width="28.0702" height="28.0702" fill="white"
+                                                    transform="translate(0.403503 0.526367)"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- /SEARCH BAR -->
+    
+                    <!-- ACCOUNT -->
+                    <div class="col-md-3 clearfix" style="position: relative; top: 25px;">
+                        <div class="header-ctn">
+                            <!-- Wishlist -->
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-heart-o"></i>
+                                    <span>Your Wishlist</span>
+                                    <div class="qty">
+                                        <%= wishlist ? wishlist.products.length : 0 %>
+                                    </div>
+                                </a>
+                                <div class="cart-dropdown">
+                                    <div class="cart-list">
+                                        <% if (wishlist && wishlist.products.length> 0) { %>
+                                            <% wishlist.products.forEach(item=> { %>
+                                                <div class="product-widget">
+                                                    <div class="product-img">
+                                                        <img src="<%= item.product.image %>" alt="<%= item.product.name %>">
+                                                    </div>
+                                                    <div class="product-body">
+                                                        <h3 class="product-name"><a href="#">
+                                                                <%= item.product.name %>
+                                                            </a></h3>
+                                                        <h4 class="product-price"><span class="qty">
+                                                                <%= item.quantity %>x
+                                                            </span>
+                                                            <%= item.product.price %>DH
+                                                        </h4>
+                                                    </div>
+                                                    <form action="/parfum/delete/<%= item.product._id %>" method="POST">
+                                                        <button type="submit" class="delete"><i
+                                                                class="fa fa-close"></i></button>
+                                                    </form>
+                                                </div>
+                                                <% }); %>
+                                                    <% } else { %>
+                                                        <p>No products in cart</p>
+                                                        <% } %>
+                                    </div>
+                                    <div class="cart-summary">
+                                        <small>
+                                            <%= wishlist ? wishlist.products.length : 0 %> Item(s) selected
+                                        </small>
+                                        <h5>SUBTOTAL: <%= wishlist ? wishlist.products.reduce((total, item)=> total +
+                                                (item.product.price * item.quantity),
+                                                0) : 0 %>DH</h5>
+                                    </div>
+                                    <div class="cart-btns">
+                                        <a href="#">View Cart</a>
+                                        <a href="/parfum/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Wishlist -->
+    
+                            <!-- Cart -->
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>Your Cart</span>
+                                    <div class="qty">
+                                        <%= cart ? cart.products.length : 0 %>
+                                    </div>
+                                </a>
+                                <div class="cart-dropdown">
+                                    <div class="cart-list">
+                                        <% if (cart && cart.products.length> 0) { %>
+                                            <% cart.products.forEach(item=> { %>
+                                                <div class="product-widget">
+                                                    <div class="product-img">
+                                                        <img src="<%= item.product.image %>" alt="<%= item.product.name %>">
+                                                    </div>
+                                                    <div class="product-body">
+                                                        <h3 class="product-name"><a href="#">
+                                                                <%= item.product.name %>
+                                                            </a></h3>
+                                                        <h4 class="product-price"><span class="qty">
+                                                                <%= item.quantity %>x
+                                                            </span>
+                                                            <%= item.product.price %>DH
+                                                        </h4>
+                                                    </div>
+                                                    <form action="/parfum/delete/<%= item.product._id %>" method="POST">
+                                                        <button type="submit" class="delete"><i
+                                                                class="fa fa-close"></i></button>
+                                                    </form>
+                                                </div>
+                                                <% }); %>
+                                                    <% } else { %>
+                                                        <p>No products in cart</p>
+                                                        <% } %>
+                                    </div>
+                                    <div class="cart-summary">
+                                        <small>
+                                            <%= cart ? cart.products.length : 0 %> Item(s) selected
+                                        </small>
+                                        <h5>SUBTOTAL: <%= cart ? cart.products.reduce((total, item)=> total +
+                                                (item.product.price * item.quantity),
+                                                0) : 0 %>DH</h5>
+                                    </div>
+                                    <div class="cart-btns">
+                                        <a href="#">View Cart</a>
+                                        <a href="/parfum/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <!-- /Cart -->
+    
+                            <!-- Menu Toogle -->
+                            <div class="menu-toggle">
+                                <a href="#">
+                                    <i class="fa fa-bars"></i>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <!-- /Menu Toogle -->
+                        </div>
+                    </div>
+                    <!-- /ACCOUNT -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- /MAIN HEADER -->
+    </header>
+    <!-- /HEADER -->
+    
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <!-- container -->
+        <div class="container">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+                <!-- NAV -->
+                <ul class="main-nav nav navbar-nav">
+                    <li class="active">
+                        <a href="/"><button class="button" data-text="Awesome">
+                                <span class="actual-text">&nbsp;Home&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;Home&nbsp;</span>
+                            </button></a>
+                    </li>
+                    <li>
+                        <a href="/parfum/store"><button class="button" data-text="Awesome">
+                                <span class="actual-text">&nbsp;Categories&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;Categories&nbsp;</span>
+                            </button></a>
+                    </li>
+                    <li>
+                        <a href="/parfum/products"><button class="button" data-text="Awesome">
+                                <span class="actual-text">&nbsp;Parfums&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;Parfums&nbsp;</span>
+                            </button></a>
+                    </li>
+                </ul>
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb" class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb-tree">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /BREADCRUMB -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- ASIDE -->
+                <div id="aside" class="col-md-3">
+                    <!-- aside Widget -->
+                    <div class="aside">
+                        <h3 class="aside-title">Categories</h3>
+                        <div class="checkbox-filter">
+
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="category-1">
+                                <label for="category-1">
+                                    <span></span>
+                                    Parfums
+                                    <small>(120)</small>
+                                </label>
+                            </div>
+
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="category-2">
+                                <label for="category-2">
+                                    <span></span>
+                                    Parfums Arabe
+                                    <small>(740)</small>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /aside Widget -->
+
+                    <!-- aside Widget -->
+                    <div class="aside">
+                        <h3 class="aside-title">Price</h3>
+                        <div class="price-filter">
+                            <div id="price-slider"></div>
+                            <div class="input-number price-min">
+                                <input id="price-min" type="number">
+                                <span class="qty-up">+</span>
+                                <span class="qty-down">-</span>
+                            </div>
+                            <span>-</span>
+                            <div class="input-number price-max">
+                                <input id="price-max" type="number">
+                                <span class="qty-up">+</span>
+                                <span class="qty-down">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /aside Widget -->
+
+                    <!-- aside Widget -->
+                    <div class="aside">
+                        <h3 class="aside-title">Marque</h3>
+                        <div class="checkbox-filter">
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="brand-1">
+                                <label for="brand-1">
+                                    <span></span>
+                                    YARA
+                                    <small>(5)</small>
+                                </label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="brand-2">
+                                <label for="brand-2">
+                                    <span></span>
+                                    BLUE CHANEL
+                                    <small>(12)</small>
+                                </label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="brand-3">
+                                <label for="brand-3">
+                                    <span></span>
+                                    NOW
+                                    <small>(7)</small>
+                                </label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="brand-4">
+                                <label for="brand-4">
+                                    <span></span>
+                                    ASAD
+                                    <small>(3)</small>
+                                </label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="brand-5">
+                                <label for="brand-5">
+                                    <span></span>
+                                    AJWAD
+                                    <small>(125)</small>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- /aside Widget -->
+
+                    <!-- aside Widget -->
+                    <div class="aside">
+                        <h3 class="aside-title">Top selling</h3>
+                        <div class="product-widget">
+                            <% parfumsA.forEach(parfum=> { %>
+                            <div class="product-img">
+                                <img src="<%= parfum.image %>" alt="">
+                            </div>   
+                            <div class="product-body">
+                                <p class="product-category">Parfum</p>
+                                <h3 class="product-name"><a href="#"><%= parfum.name %></a></h3>
+                                <h4 class="product-price"><%= parfum.price %>.00DH <del class="product-old-price">299.00DH</del></h4>
+                            </div>
+                            <% }); %>
+                        </div>
+
+                    </div>
+                    <!-- /aside Widget -->
+                </div>
+                <!-- /ASIDE -->
+
+                <!-- STORE -->
+                <div id="store" class="col-md-9">
+                    <!-- store top filter -->
+                    <div class="store-filter clearfix">
+                        <div class="store-sort">
+                            <label>
+                                Sort By:
+                                <select class="input-select">
+                                    <option value="0">Popular</option>
+                                    <option value="1">Position</option>
+                                </select>
+                            </label>
+                
+                            <label>
+                                Show:
+                                <select class="input-select">
+                                    <option value="12">9</option>
+                                    <option value="24">12</option>
+                                </select>
+                            </label>
+                        </div>
+                        <ul class="store-grid">
+                            <li class="active"><i class="fa fa-th"></i></li>
+                            <li><a href="#"><i class="fa fa-th-list"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /store top filter -->
+                
+                    <!-- store products -->
+                    <div class="row">
+                        <% parfums.forEach(function(parfum) { %>
+                            <!-- product -->
+                            <div class="col-md-4 col-xs-6">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <img src="<%= parfum.image %>" style="height: 270px;" alt="<%= parfum.name %>">
+                                        <div class="product-label">
+                                            <span class="sale">-30%</span>
+                                            <span class="new">NEW</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-body">
+                                        <p class="product-category">Category</p>
+                                        <h3 class="product-name"><a href="#">
+                                                <%= parfum.name %>
+                                            </a></h3>
+                                        <h4 class="product-price">$<%= parfum.price %>.00DH <del class="product-old-price">299.00DH</del></h4>
+                                        <div class="product-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="product-btns">
+                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to
+                                                    wishlist</span></button>
+                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to
+                                                    compare</span></button>
+                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick
+                                                    view</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="add-to-cart">
+                                    <form action="/parfum/add-to-cart/<%= parfum._id %>" method="post">
+                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /product -->
+                            <% }); %>
+                    </div>
+                    <!-- /store products -->
+                
+                    <!-- store bottom filter -->
+                    <div class="store-filter clearfix">
+                        <span class="store-qty">Showing <%= (currentPage - 1) * 12 + 1 %>-<%= Math.min(currentPage * 12, totalProducts)
+                                    %> of <%= totalProducts %> products</span>
+                        <ul class="store-pagination">
+                            <% if (currentPage> 1) { %>
+                                <li><a href="/parfum/store?page=<%= currentPage - 1 %>"><i class="fa fa-angle-left"></i></a></li>
+                                <% } %>
+                                    <% for (let i=1; i <=totalPages; i++) { %>
+                                        <li class="<%= i === currentPage ? 'active' : '' %>"><a href="/parfum/store?page=<%= i %>">
+                                                <%= i %>
+                                            </a></li>
+                                        <% } %>
+                                            <% if (currentPage < totalPages) { %>
+                                                <li><a href="/parfum/store?page=<%= currentPage + 1 %>"><i class="fa fa-angle-right"></i></a>
+                                                </li>
+                                                <% } %>
+                        </ul>
+                    </div>
+                    <!-- /store bottom filter -->
+                </div>
+                <!-- /STORE -->
+                 
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- NEWSLETTER -->
+    <div id="newsletter" class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="newsletter">
+                        <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+                        <form>
+                            <input class="input" type="email" placeholder="Enter Your Email">
+                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+                        </form>
+                        <ul class="social" style="margin-top: 50px;">
+                            <li class="social-item">
+                                <a class="social-link" href="/">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a class="social-link" href="/">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a class="social-link" href="/">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6 12C6 15.3137 8.68629 18 12 18C14.6124 18 16.8349 16.3304 17.6586 14H12V10H21.8047V14H21.8C20.8734 18.5645 16.8379 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.445 2 18.4831 3.742 20.2815 6.39318L17.0039 8.68815C15.9296 7.06812 14.0895 6 12 6C8.68629 6 6 8.68629 6 12Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a class="social-link" href="/">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+                                            fill="currentColor"></path>
+                                        <path
+                                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                            fill="currentColor"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /NEWSLETTER -->
+    
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">About Us</h3>
+                            <p>Explorez notre collection de parfums exclusifs, avec filtres, avis clients, échantillons,
+                                conseils experts, offres
+                                spéciales et service client dédié.</p>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>302 BD SEBTA</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+212 627-189630</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>Hamza@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Parfums</a></li>
+                                <li><a href="#">Parfums Arabe</a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="clearfix visible-xs"></div>
+    
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Orders and Returns</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Track My Order</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+    
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-payments">
+                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                        </ul>
+                        <span class="copyright">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://www.facebook.com/abdelali.abia.7?locale=fr_FR" target="_blank">Abdelali
+                                MOUTAWASSIT</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- jQuery Plugins -->
+    <script src="/HomeParfumStyle/js/jquery.min.js"></script>
+    <script src="/HomeParfumStyle/js/bootstrap.min.js"></script>
+    <script src="/HomeParfumStyle/js/slick.min.js"></script>
+    <script src="/HomeParfumStyle/js/nouislider.min.js"></script>
+    <script src="/HomeParfumStyle/js/jquery.zoom.min.js"></script>
+    <script src="/HomeParfumStyle/js/main.js"></script>
+
+</body>
+
+</html>

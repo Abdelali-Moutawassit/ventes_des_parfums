@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Electro - HTML Ecommerce Template</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/bootstrap.min.css" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="/HomeParfumStyle/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="/HomeParfumStyle/css/style.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<style>
+    .icon-hover-primary:hover {
+        border-color: #3b71ca !important;
+        background-color: white !important;
+    }
+
+    .icon-hover-primary:hover i {
+        color: #3b71ca !important;
+    }
+
+    .icon-hover-danger:hover {
+        border-color: #dc4c64 !important;
+        background-color: white !important;
+    }
+
+    .icon-hover-danger:hover i {
+        color: #dc4c64 !important;
+    }
+
+    body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    /* font-family: Arial, sans-serif; */
+}
+
+.plus-minus {
+    position: relative;
+}
+
+.plus {
+    position: absolute;
+    top: -4px;
+    left: 2px;
+    cursor: pointer;
+}
+
+.minus {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.vsm-text:hover {
+    color: #FF5252;
+}
+
+.book, .book-img {
+    width: 120px;
+    height: 140px;
+    border-radius: 5px;
+}
+
+.book {
+    margin: 20px 15px 5px 15px;
+}
+
+.border-top {
+    border-top: 1px solid #EEEEEE !important;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+.card {
+    margin: 40px 0px;
+    padding: 40px 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+    background-color: #F3E5F5;
+    padding: 8px 15px 8px 15px;
+    width: 100%;
+    border-radius: 5px !important;
+    box-sizing: border-box;
+    border: 1px solid #F3E5F5;
+    font-size: 15px !important;
+    color: #000 !important;
+    font-weight: 300;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #9FA8DA;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.pay {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #673AB7;
+    margin: 10px 20px 10px 0px;
+    cursor: pointer;
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.2);
+}
+
+.gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    color: #E0E0E0;
+}
+
+.gray .pay {
+    box-shadow: none;
+}
+
+#tax {
+    border-top: 1px lightgray solid;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.btn-blue {
+    border: none;
+    border-radius: 10px;
+    background-color: #673AB7;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+.btn-blue:hover {
+    background-color: #311B92;
+    color: #fff;
+}
+
+#checkout {
+    float: left;
+}
+
+#check-amt {
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .book, .book-img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .card {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .mob-text {
+        font-size: 13px;
+    }
+
+    .pad-left { 
+        padding-left: 20px;
+    }
+}
+
+.scrollable-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+
+</style>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"><i class="fa fa-phone"></i> +212 627-189630</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Hamza@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> 302 BD SEBTA</a></li>
+                </ul>
+                <ul class="header-links pull-right">
+                    <li><a href="#"><i class="fa fa-money"></i> DH</a></li>
+                    <li><a href="/users/login"><i class="fa fa-user-o"></i> My Account</a></li>
+                    <% if (user) { %>
+                        <li><a href="/users/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+        <!-- /TOP HEADER -->
+    
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-3">
+                        <div class="header-logo">
+                            <a href="#" class="logo">
+                                <img src="/HomeParfumStyle/img/LogoHHR.png" style="position: relative; left: -140px;" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+    
+                    <!-- SEARCH BAR -->
+                    <div class="col-md-6" style="position: relative; top: 10px; right: 0px;">
+                        <div class="header-search">
+                            <div class="searchBox">
+                                <input class="searchInput" type="text" name="" placeholder="Search something">
+                                <button class="searchButton" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2_17)">
+                                            <g filter="url(#filter0_d_2_17)">
+                                                <path
+                                                    d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
+                                                    stroke="white" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                                            </g>
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139"
+                                                height="29.7139" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                                </feColorMatrix>
+                                                <feOffset dy="4"></feOffset>
+                                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+                                                </feColorMatrix>
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_2_17"></feBlend>
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17"
+                                                    result="shape">
+                                                </feBlend>
+                                            </filter>
+                                            <clipPath id="clip0_2_17">
+                                                <rect width="28.0702" height="28.0702" fill="white"
+                                                    transform="translate(0.403503 0.526367)"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- /SEARCH BAR -->
+    
+                    <!-- ACCOUNT -->
+                    <div class="col-md-3 clearfix" style="position: relative; top: 25px;">
+                        <div class="header-ctn">
+                            <!-- Wishlist -->
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-heart-o" style="color: #fff;"></i>
+                                    <span style="color: #fff;">Your Wishlist</span>
+                                    <div class="qty">
+                                        <%= wishlist ? wishlist.products.length : 0 %>
+                                    </div>
+                                </a>
+                                <div class="cart-dropdown">
+                                    <div class="cart-list">
+                                        <% if (wishlist && wishlist.products.length> 0) { %>
+                                            <% wishlist.products.forEach(item=> { %>
+                                                <div class="product-widget">
+                                                    <div class="product-img">
+                                                        <img src="<%= item.product.image %>" alt="<%= item.product.name %>">
+                                                    </div>
+                                                    <div class="product-body">
+                                                        <h3 class="product-name"><a href="#">
+                                                                <%= item.product.name %>
+                                                            </a></h3>
+                                                        <h4 class="product-price"><span class="qty">
+                                                                <%= item.quantity %>x
+                                                            </span>
+                                                            <%= item.product.price %>DH
+                                                        </h4>
+                                                    </div>
+                                                    <form action="/parfum/delete/<%= item.product._id %>" method="POST">
+                                                        <button type="submit" class="delete"><i
+                                                                class="fa fa-close"></i></button>
+                                                    </form>
+                                                </div>
+                                                <% }); %>
+                                                    <% } else { %>
+                                                        <p>No products in cart</p>
+                                                        <% } %>
+                                    </div>
+                                    <div class="cart-summary">
+                                        <small>
+                                            <%= wishlist ? wishlist.products.length : 0 %> Item(s) selected
+                                        </small>
+                                        <h5>SUBTOTAL: <%= wishlist ? wishlist.products.reduce((total, item)=> total +
+                                                (item.product.price * item.quantity),
+                                                0) : 0 %>DH</h5>
+                                    </div>
+                                    <div class="cart-btns">
+                                        <a href="#">View Cart</a>
+                                        <a href="/parfum/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Wishlist -->
+    
+                            <!-- Cart -->
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-shopping-cart" style="color: #fff;"></i>
+                                    <span style="color: #fff;">Your Cart</span>
+                                    <div class="qty">
+                                        <%= cart ? cart.products.length : 0 %>
+                                    </div>
+                                </a>
+                                <div class="cart-dropdown">
+                                    <div class="cart-list">
+                                        <% if (cart && cart.products.length> 0) { %>
+                                            <% cart.products.forEach(item=> { %>
+                                                <div class="product-widget">
+                                                    <div class="product-img">
+                                                        <img src="<%= item.product.image %>" alt="<%= item.product.name %>">
+                                                    </div>
+                                                    <div class="product-body">
+                                                        <h3 class="product-name"><a href="#">
+                                                                <%= item.product.name %>
+                                                            </a></h3>
+                                                        <h4 class="product-price"><span class="qty">
+                                                                <%= item.quantity %>x
+                                                            </span>
+                                                            <%= item.product.price %>DH
+                                                        </h4>
+                                                    </div>
+                                                    <form action="/parfum/delete/<%= item.product._id %>" method="POST">
+                                                        <button type="submit" class="delete"><i
+                                                                class="fa fa-close"></i></button>
+                                                    </form>
+                                                </div>
+                                                <% }); %>
+                                                    <% } else { %>
+                                                        <p>No products in cart</p>
+                                                        <% } %>
+                                    </div>
+                                    <div class="cart-summary">
+                                        <small>
+                                            <%= cart ? cart.products.length : 0 %> Item(s) selected
+                                        </small>
+                                        <h5>SUBTOTAL: <%= cart ? cart.products.reduce((total, item)=> total +
+                                                (item.product.price * item.quantity),
+                                                0) : 0 %>DH</h5>
+                                    </div>
+                                    <div class="cart-btns">
+                                        <a href="#">View Cart</a>
+                                        <a href="/parfum/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <!-- /Cart -->
+    
+                            <!-- Menu Toogle -->
+                            <div class="menu-toggle">
+                                <a href="#">
+                                    <i class="fa fa-bars"></i>
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                            <!-- /Menu Toogle -->
+                        </div>
+                    </div>
+                    <!-- /ACCOUNT -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- /MAIN HEADER -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb-tree">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Checkout</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+    </div>
+    <!-- /BREADCRUMB -->
+
+    <div class="container px-4 py-5 mx-auto">
+        <div class="row d-flex justify-content-center" style="margin-right: 70px; margin-left: 30px;">
+            <div class="col-5">
+                <h4 class="heading">Shopping Bag</h4>
+            </div>
+            <div class="col-7">
+                <div class="row text-right">
+                    <div class="col-4">
+                        <h6 class="mt-2">Format</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="mt-2">Quantity</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="mt-2">Price</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Scrollable container for product list -->
+        <div class="scrollable-container">
+            <% cart.products.forEach(item=> { %>
+                <div class="row d-flex justify-content-center border-top">
+                    <div class="col-5">
+                        <div class="row d-flex">
+                            <div class="book">
+                                <img src="<%= item.product.image %>" class="book-img">
+                            </div>
+                            <div class="my-auto flex-column d-flex pad-left">
+                                <h6 class="mob-text">
+                                    <%= item.product.name %>
+                                </h6>
+                                <p class="mob-text">Parfum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-auto col-7">
+                        <div class="row text-right">
+                            <div class="col-4">
+                                <p class="mob-text" style="margin-right: 10px;">Parfum</p>
+                            </div>
+                            <div class="col-4">
+                                <div class="row d-flex justify-content-end px-3" style="margin-right: 30px;">
+                                    <p class="mb-0" id="cnt1">
+                                        <%= item.quantity %>
+                                    </p>
+                                    <div class="d-flex flex-column plus-minus">
+                                        <span class="vsm-text plus">+</span>
+                                        <span class="vsm-text minus">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="mob-text" style="margin-right: 20px;">
+                                    <%= item.product.price %>.00DH
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-3 radio-group">
+                            <div class="row d-flex px-3 radio mb-3">
+                                <img class="pay"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBl4JXh5Ittff7M4DZ5XRwyGJFZgbZwL-hhg&s">
+                                <p class="my-auto">PayPal</p>
+                            </div>
+                            <div class="row d-flex px-3 radio gray">
+                                <img class="pay"
+                                    src="https://www.bnc.ca/content/dam/bnc/particuliers/catalogue/cartes-credit/mycredit-card-300x190.png">
+                                <p class="my-auto">Credit Card</p>
+                            </div>
+                            <div class="row d-flex px-3 radio gray">
+                                <img class="pay"
+                                    src="https://www.cibc.com/content/dam/global-assets/card-art/debit-cards/cibc-advantage-debit-card/cibc-advantage-debit-en.png/_jcr_content/renditions/cq5dam.web.1280.1280.png">
+                                <p class="my-auto">Debit Card</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="row px-5" style="position: relative; left: 60px; top: 55px;">
+                                <div id="paypal-payment-button"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-2" style="position: relative; top: 45px;">
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Subtotal</p>
+                                <h6 class="mb-1 text-right">
+                                    <%= cart ? cart.products.reduce((total, item)=> total + (item.product.price *
+                                        item.quantity), 0) : 0 %>DH
+                                </h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Shipping</p>
+                                <h6 class="mb-1 text-right">2.99DH</h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4" id="tax">
+                                <p class="mb-1 text-left">Total (tax included)</p>
+                                <h6 class="mb-1 text-right">
+                                    <%= cart ? cart.products.reduce((total, item)=> total + (item.product.price *
+                                        item.quantity), 0) : 0 %>DH
+                                </h6>
+                            </div>
+                            <button class="btn-block btn-blue">
+                                <span>
+                                    <span id="checkout">Checkout</span>
+                                    <span id="check-amt">
+                                        <%= cart ? cart.products.reduce((total, item)=> total + (item.product.price *
+                                            item.quantity), 0) : 0 %>DH
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- NEWSLETTER -->
+    <div id="newsletter" class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="newsletter">
+                        <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+                        <form>
+                            <input class="input" type="email" placeholder="Enter Your Email">
+                            <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+                        </form>
+                        <ul class="newsletter-follow">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /NEWSLETTER -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">About Us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut.</p>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Hot deals</a></li>
+                                <li><a href="#">Laptops</a></li>
+                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Orders and Returns</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Track My Order</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-payments">
+                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                        </ul>
+                        <span class="copyright">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <script>
+        $(document).ready(function () {
+
+                $('.radio-group .radio').click(function () {
+                    $('.radio').addClass('gray');
+                    $(this).removeClass('gray');
+                });
+
+                $('.plus-minus .plus').click(function () {
+                    var count = $(this).parent().prev().text();
+                    $(this).parent().prev().html(Number(count) + 1);
+                });
+
+                $('.plus-minus .minus').click(function () {
+                    var count = $(this).parent().prev().text();
+                    $(this).parent().prev().html(Number(count) - 1);
+                });
+
+            });
+    </script>
+
+
+    <!-- jQuery Plugins -->
+    <script src="/HomeParfumStyle/js/jquery.min.js"></script>
+    <script src="/HomeParfumStyle/js/bootstrap.min.js"></script>
+    <script src="/HomeParfumStyle/js/slick.min.js"></script>
+    <script src="/HomeParfumStyle/js/nouislider.min.js"></script>
+    <script src="/HomeParfumStyle/js/jquery.zoom.min.js"></script>
+    <script src="/HomeParfumStyle/js/main.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AVf8JwVIt4A0BmSuvHNG7AeJGLfCGlt8fo9FQFSLXkCJw8-pFMgFO3h5pOVV9ebPfckf2cMf0zHpH84f&currency=EUR"></script>
+    
+        <script>
+            paypal.Buttons({
+                    style: {
+                        color: 'blue'
+                    },
+                    createOrder: function (data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '0.10'
+                                }
+                            }]
+                        })
+                    },
+                    onApprove: function (data, actions) {
+                        // This function captures the funds from the transaction.
+                        return actions.order.capture().then(function (details) {
+                            console.log(details)
+                            window.location.replace("success.html")
+                        })
+                    }
+                }).render('#paypal-payment-button');
+        </script>
+
+</body>
+
+</html>
