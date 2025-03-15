@@ -56,7 +56,7 @@ L'application sera disponible sur `http://localhost:3000`
 ## Améliorations futures
 - Implémentation d'un système de paiement
 - Gestion avancée des commandes
-- Notifications par email après l'achat
+- Notifications par email après l'achat 
 
 ## Auteur
 Développé par **[Moutawassit Abdelali]**
